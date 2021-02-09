@@ -8,6 +8,9 @@ import state from "./redux/state";
 
 
 
+
+
+
 rerenderEntireTree(state);
 
 // If you want to start measuring performance in your app, pass a function
