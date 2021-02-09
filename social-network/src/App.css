@@ -1,0 +1,19 @@
+
+
+.app-wrapper {
+
+
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 70px 1fr;
+  grid-gap: 15px;
+  width: 100%;
+  height: auto;
+  max-width: 1400px;
+  padding-top: 20px;
+  margin: 0 auto;
+
+}
+.app-wrapper-content {
+  grid-column: 2/3;
+}

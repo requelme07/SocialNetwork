@@ -1,0 +1,28 @@
+
+.item {
+    margin-top: 50px;
+
+    display: flex;
+    color: #47525E;
+}
+
+.photo {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.text {
+    margin-left: 30px;
+    font-size: 23px;
+}
+
+.like {
+    margin-top: 10px;
+    color: #5BCF67;
+}
+
+.red {
+    color: red;
+}

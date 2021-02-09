@@ -1,0 +1,49 @@
+.nav {
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    background-color: #5BCF67;
+    color: white;
+    font-size: 30px;
+    padding: 15px;
+}
+
+.item {
+    margin-bottom: 7px;
+}
+
+.item a {
+    color: white;
+    text-decoration: none;
+}
+
+.item a.active {
+    color: gold;
+}
+.friends_container {
+    display: flex;
+
+}
+.item_set {
+    margin-top: 40px;
+}
+
+.item_friends {
+    margin-top: 70px;
+    font-size: 40px;
+    font-weight: 100;
+    opacity: 0.9;
+}
+
+.friends_item {
+    font-size: 12px;
+    padding: 0 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.friends_item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

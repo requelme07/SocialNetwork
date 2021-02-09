@@ -1,0 +1,29 @@
+
+.posts {
+  margin: 20px;
+  color: #47525E;
+  
+}
+.posts h2 {
+  font-size: 33px;
+  font-weight: 400;
+}
+.input {
+  width: 100%;
+  height: 80px;
+  border: none;
+  background-color: #E6EEEA;
+  font-size: 25px;
+  color: #B0B8C2;
+  opacity: 0.6;
+  padding: 15px 0 40px 15px;
+}
+.btn {
+  margin-top: 20px;
+  border: none;
+  color: white;
+  background-color: #50B759;
+  font-size: 22px;
+  padding: 5px 70px 5px 20px;
+}
+
