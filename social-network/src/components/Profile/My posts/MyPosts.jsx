@@ -11,23 +11,26 @@ const MyPosts = (props) => {
     let newPostElement = React.createRef()
 
     let addPost = ()=> {
-        let text = newPostElement.current.value
-        props.addPost(text)
-        newPostElement.current.value = ''
+        props.dispatch({ type: 'ADD-POST' });
+    }
+    let onPostChange = ()=> {
+        let text = newPostElement.current.value;
+        props.dispatch({ type: 'UPDATE-NEW-POST-TEXT', newText: text });
     }
 
     return (
         <div className={style.posts}>
             <h2>My posts</h2>
             <div>
-                <input ref={newPostElement}
+                <input onChange={ onPostChange } ref={newPostElement}
                        className={style.input}
+                       value={props.newPostText}
                        name="search"
                        placeholder="your news..."
                        type="search"
                 />
             </div>
-            <button onClick={addPost} className={style.btn}>Send
+            <button onClick={ addPost } className={style.btn}>Send
             </button>
             {postElements}
         </div>
