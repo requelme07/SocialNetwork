@@ -12,6 +12,7 @@ import Post from "../Profile/My posts/Post/Post";
 
 
 const Navbar = (props) => {
+
     return (
         <nav className={style.nav}>
             <div className={style.item}>
