@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 import "./App.css";
-import {BrowserRouter, Route} from "react-router-dom"
+import {BrowserRouter, Route} from "react-router-dom";
 
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
@@ -11,32 +11,37 @@ import News from "./components/News/News";
 import Settings from "./components/Settings/Settings";
 import Friends from "./components/Friends/Friends";
 
-
 const App = (props) => {
-
     return (
         <BrowserRouter>
             <div className="app-wrapper">
                 <Header/>
                 <Navbar/>
                 <div className="app-wrapper-content">
-                    <Route path="/dialogs"
-                           render={() => <Dialogs store = {props.store} />}/>
-                    <Route path="/profile"
-                           render={() => <Profile
-                               profilePage={props.state.profilePage}
-                               dispatch={props.dispatch}
-                           />}/>
+                    <Route
+                        path="/dialogs"
+                        render={() => <Dialogs store={props.store}/>}
+                    />
+                    <Route
+                        path="/profile"
+                        render={() => (
+                            <Profile
+                                profilePage={props.state.profilePage}
+                                dispatch={props.dispatch}
+                            />
+                        )}
+                    />
                     <Route path="/news" render={() => <News/>}/>
                     <Route path="/music" render={() => <Music/>}/>
                     <Route path="/settings" render={() => <Settings/>}/>
-                    <Route path="/friends"
-                           render={() => <Friends state={props.state.sidebar}/>}/>
+                    <Route
+                        path="/friends"
+                        render={() => <Friends state={props.state.sidebar}/>}
+                    />
                 </div>
             </div>
         </BrowserRouter>
     );
-}
-
+};
 
 export default App;
