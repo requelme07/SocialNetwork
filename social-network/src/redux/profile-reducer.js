@@ -3,38 +3,38 @@ const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
 
 let initialState = {
     posts: [
-        { id: 1, message: "Hi, how are you?", likesCount: 22 },
-        { id: 2, message: "My first post!", likesCount: 17 },
+        {id: 1, message: "Hi, how are you?", likesCount: 22},
+        {id: 2, message: "My first post!", likesCount: 17},
     ],
     newPostText: "",
 };
 
 const profileReducer = (state = initialState, action) => {
-    switch (action.type)    {
-        case ADD_POST: {
+    switch (action.type) {
+        case ADD_POST:
             let newPost = {
                 id: 3,
                 message: state.newPostText,
                 likesCount: 0,
             };
-            let stateCopy = {...state};
-            stateCopy = [...state.posts];
-            stateCopy.posts.push(newPost);
-            stateCopy.newPostText = "";
-            return stateCopy;
-        }
-        case UPDATE_NEW_POST_TEXT: {
-            let stateCopy = {...state};
+            return {
+                ...state,
+                posts: [...state.posts, newPost],
+                newPostText: "",
+            };
 
-            stateCopy.newPostText = action.newText;
-            return stateCopy;
-        }
+        case UPDATE_NEW_POST_TEXT:
+            return {
+                ...state,
+                newPostText: action.newText,
+            };
+
         default:
             return state;
     }
 };
 
-export const addPostActionCreator = () => ({ type: ADD_POST });
+export const addPostActionCreator = () => ({type: ADD_POST});
 export const updateNewPostTextActionCreator = (text) => ({
     type: UPDATE_NEW_POST_TEXT,
     newText: text,
