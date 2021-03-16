@@ -1,7 +1,7 @@
 import React from "react"
 
 import  style from"./Header.module.css"
-import logo from "./safari.svg"
+import logo from "./logo.svg"
 
 
 const Header = ()=> {

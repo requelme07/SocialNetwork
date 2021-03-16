@@ -3,7 +3,7 @@
     margin-top: 50px;
 
     display: flex;
-    color: #47525E;
+    color: #9c9cab;
 }
 
 .photo {
@@ -20,9 +20,9 @@
 
 .like {
     margin-top: 10px;
-    color: #5BCF67;
+    color: #92f19a;
 }
 
 .red {
-    color: red;
+    color: #f64e4e;
 }

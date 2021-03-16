@@ -10,7 +10,8 @@ let Users = (props) => {
                 fullName: "Ilya",
                 status: "I am a boss",
                 locations: {city: "Barnaul", country: "Russia"},
-                photoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%93%D0%BE%D1%80%D0%B4%D0%BE%D0%BD_2015.jpg/274px-%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%93%D0%BE%D1%80%D0%B4%D0%BE%D0%BD_2015.jpg"
+                photoUrl:
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%93%D0%BE%D1%80%D0%B4%D0%BE%D0%BD_2015.jpg/274px-%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%93%D0%BE%D1%80%D0%B4%D0%BE%D0%BD_2015.jpg",
             },
             {
                 id: 2,
@@ -18,7 +19,8 @@ let Users = (props) => {
                 fullName: "Anton",
                 status: "I am a boss too",
                 locations: {city: "Krasnodar", country: "Russia"},
-                photoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%93%D0%BE%D1%80%D0%B4%D0%BE%D0%BD_2015.jpg/274px-%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%93%D0%BE%D1%80%D0%B4%D0%BE%D0%BD_2015.jpg"
+                photoUrl:
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%93%D0%BE%D1%80%D0%B4%D0%BE%D0%BD_2015.jpg/274px-%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%93%D0%BE%D1%80%D0%B4%D0%BE%D0%BD_2015.jpg",
             },
             {
                 id: 3,
@@ -26,7 +28,8 @@ let Users = (props) => {
                 fullName: "Anastasya",
                 status: "I am a manager",
                 locations: {city: "Barnaul", country: "Russia"},
-                photoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%93%D0%BE%D1%80%D0%B4%D0%BE%D0%BD_2015.jpg/274px-%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%93%D0%BE%D1%80%D0%B4%D0%BE%D0%BD_2015.jpg"
+                photoUrl:
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%93%D0%BE%D1%80%D0%B4%D0%BE%D0%BD_2015.jpg/274px-%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%93%D0%BE%D1%80%D0%B4%D0%BE%D0%BD_2015.jpg",
             },
             {
                 id: 4,
@@ -34,11 +37,11 @@ let Users = (props) => {
                 fullName: "Kirill",
                 status: "Only i am a boss",
                 locations: {city: "Almaty", country: "Kazakhstan"},
-                photoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%93%D0%BE%D1%80%D0%B4%D0%BE%D0%BD_2015.jpg/274px-%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%93%D0%BE%D1%80%D0%B4%D0%BE%D0%BD_2015.jpg"
+                photoUrl:
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%93%D0%BE%D1%80%D0%B4%D0%BE%D0%BD_2015.jpg/274px-%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%93%D0%BE%D1%80%D0%B4%D0%BE%D0%BD_2015.jpg",
             },
-        ])
+        ]);
     }
-
 
     return (
         <div>
@@ -52,11 +55,25 @@ let Users = (props) => {
                                 src={u.photoUrl}
                                 alt="userPhoto"
                             />
-                            {u.followed
-                                ? <button onClick={()=> {props.unfollow(u.id)}} className={style.btn}>Unfollow</button>
-                                : <button onClick={()=> {props.follow(u.id)}} className={style.btn}>Follow</button>
-                            }
-
+                            {u.followed ? (
+                                <button
+                                    onClick={() => {
+                                        props.unfollow(u.id);
+                                    }}
+                                    className={style.btn}
+                                >
+                                    Unfollow
+                                </button>
+                            ) : (
+                                <button
+                                    onClick={() => {
+                                        props.follow(u.id);
+                                    }}
+                                    className={style.btn}
+                                >
+                                    Follow
+                                </button>
+                            )}
                         </div>
                         <div className={style.user_info}>
                             <div className={style.user_item}>
