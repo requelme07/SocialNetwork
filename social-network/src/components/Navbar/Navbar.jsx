@@ -2,10 +2,6 @@ import React from "react";
 
 import style from "./Navbar.module.css";
 import {NavLink} from "react-router-dom";
-import profile from "./profile.svg"
-
-
-
 
 const Navbar = (props) => {
     return (
