@@ -1,7 +1,7 @@
 h3 {
     font-size: 23px;
     font-weight: 400;
-    margin: 0;
+    margin: 15px 10px;
 }
 .container {
     display: flex;
@@ -32,17 +32,22 @@ h3 {
     font-weight: 500;
 }
 .user_photo {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 .btn {
     margin-top: 15px;
     border: none;
-    color: white;
-    background-color: #50B759;
+    color: #9c9cab;
+    background-color: #151728;
     padding: 5px 10px;
     width: 70px;
+}
+.btn:hover {
+    box-shadow: 0 0 20px #B0B8C2;
+    color: white;
+    transition: .3s linear;
 }
 .btn:focus {
     outline: none;

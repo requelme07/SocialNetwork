@@ -2,12 +2,16 @@ import React from "react";
 
 import style from "./Navbar.module.css";
 import {NavLink} from "react-router-dom";
-import Post from "../Profile/My posts/Post/Post";
+import profile from "./profile.svg"
+
+
+
 
 const Navbar = (props) => {
     return (
         <nav className={style.nav}>
             <div className={style.item}>
+
                 <NavLink to="/profile" activeClassName={style.active}>
                     Profile
                 </NavLink>
