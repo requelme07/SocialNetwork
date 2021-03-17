@@ -9,7 +9,7 @@
 .profile {
     display: flex;
     margin-top: 15px;
-    color: #47525E;
+    color: #9c9cab;
     font-size: 28px;
     font-weight: 400;
 
@@ -19,6 +19,7 @@
     object-fit: cover;
     width: 150px;
     height: 150px;
+
 }
 
 .info {
