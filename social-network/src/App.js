@@ -10,12 +10,14 @@ import Settings from "./components/Settings/Settings";
 import Friends from "./components/Friends/Friends";
 import DialogsContainer from "./components/Dialogs/Dialogs-container";
 import UsersContainer from "./components/Users/UsersContainer";
+import Stories from "./components/Stories/Stories";
 
 const App = (props) => {
     return (
         <div className="app-wrapper">
             <Header/>
             <Navbar/>
+
             <div className="app-wrapper-content">
                 <Route
                     path="/dialogs"
@@ -28,6 +30,7 @@ const App = (props) => {
                 <Route path="/friends" render={() => <Friends/>}/>
                 <Route path="/users" render={() => <UsersContainer/>}/>
             </div>
+            <Stories/>
         </div>
     );
 };
